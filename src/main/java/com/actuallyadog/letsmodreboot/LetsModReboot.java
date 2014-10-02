@@ -1,5 +1,6 @@
 package com.actuallyadog.letsmodreboot;
 
+import com.actuallyadog.letsmodreboot.configuration.ConfigurationHandler;
 import com.actuallyadog.letsmodreboot.proxy.IProxy;
 import com.actuallyadog.letsmodreboot.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -17,12 +18,12 @@ public class LetsModReboot {
     @Mod.Instance("LetsModReboot")
     public static LetsModReboot instance;
 
-    @SidedProxy(clientSide = "com.actuallyadog.letsmodreboot.proxy.ClientProxy", serverSide = "com.actuallyadog.letsmodreboot.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
