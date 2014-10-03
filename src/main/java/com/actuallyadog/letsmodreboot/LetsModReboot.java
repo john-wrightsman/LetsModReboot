@@ -1,6 +1,6 @@
 package com.actuallyadog.letsmodreboot;
 
-import com.actuallyadog.letsmodreboot.configuration.ConfigurationHandler;
+import com.actuallyadog.letsmodreboot.handler.ConfigurationHandler;
 import com.actuallyadog.letsmodreboot.proxy.IProxy;
 import com.actuallyadog.letsmodreboot.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -12,7 +12,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 /**
  * Created by John on 10/1/2014.
  */
-@Mod(modid=Reference.MOD_ID, name=Reference.NAME, version=Reference.VERSION)
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
 public class LetsModReboot {
 
     @Mod.Instance("LetsModReboot")
